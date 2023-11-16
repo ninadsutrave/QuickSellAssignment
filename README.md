@@ -18,6 +18,17 @@ Portfolio: [ninadsutrave.in](https://ninadsutrave.in)
 
 Email: 2019med1010@iitrpr.ac.in
 
+## Features
+
+✓ Easy tracking of pending work by subordinates/employees/team
+
+✓ Distribute tasks by employee name, status and priority
+
+✓ Sort on the basis of task or priority
+
+✓ Sophisticated UI and easy to use
+
+
 ## Libraries/Packages Used
  - **React Icons**:
 
