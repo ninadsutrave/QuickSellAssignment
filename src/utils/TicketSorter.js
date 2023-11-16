@@ -1,4 +1,4 @@
-import { getPriorityName  } from "./TicketData";
+import { getPriorityName  } from "./getTicketData";
 
 const attributeComparator = (attribute) => (a, b) => {
   const valueA = typeof a[attribute] === 'string' ? a[attribute].toLowerCase() : a[attribute];

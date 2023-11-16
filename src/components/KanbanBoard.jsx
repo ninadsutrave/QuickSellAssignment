@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useDisplay } from '../contexts/DisplayContext'
 import ColumnHeading from './ColumnHeading'
-import { getTicketData } from '../utils/TicketData'
-import { getSortedTickets } from '../utils/SortTickets'
+import { getTicketData } from '../utils/getTicketData'
+import { getSortedTickets } from '../utils/TicketSorter'
 import Card from './Card'
 import './KanbanBoard.css'
 

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const getTicketData = () => {
+export const getTickets = () => {
     return axios.get('https://api.quicksell.co/v1/internal/frontend-assignment')
     .then((response) => {
         if(response.data) {
@@ -32,4 +32,28 @@ export const getPriorityName = (priority) => {
     case 4: return "Urgent";
     default: return ""
   }
+}
+
+export const getPriority = (priorityName) => {
+  switch (priorityName) {
+    case "No Priority": return 0;
+    case "Low Priority": return 1;
+    case "Medium Priority": return 2;
+    case "High Priority": return 3;
+    case "Urgent": return 4;
+    default: return null;
+  } 
+}
+
+export const getAvailability = (userName) => {
+  return axios.get('https://api.quicksell.co/v1/internal/frontend-assignment')
+  .then((response) => {
+      if(response.data) {
+          const user = response.data.users.find((user) => user.name === userName);
+          if(user) {
+            return user.available
+          }
+      } else throw console.error('Response null');
+  })
+  .catch((err) => console.log(err))
 }
