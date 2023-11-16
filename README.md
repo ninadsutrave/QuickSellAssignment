@@ -3,7 +3,7 @@
 <h1 align="center">QuickSell Frontend Assignment</h1>
 
 # Task
-A task tracking application featuring a Kanban Style Dashboard
+A task tracking application featuring a Kanban style Dashboard
 
 https://quicksell.notion.site/Frontend-assignment-fa2f7f8aaada4099916994bad6ec70c2
 
@@ -40,7 +40,13 @@ Email: 2019med1010@iitrpr.ac.in
 
  ## APIs used
 
- **UI Avatars**
+ - **QuickSell API**
+
+https://api.quicksell.co/v1/internal/frontend-assignment
+
+To fetch ticket and user information
+
+ - **UI Avatars**
 
  https://ui-avatars.com/api
 

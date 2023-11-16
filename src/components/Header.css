@@ -2,4 +2,5 @@
     min-width: 100vw;
     padding: 1.6rem 4rem;
     background-color: #FFFFFF;
+    z-index: 5;
 }

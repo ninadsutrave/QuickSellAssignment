@@ -1,30 +1,45 @@
 import PropTypes from 'prop-types'
+import { getPriorityIcon, getStatusIcon, getUserIcon } from '../utils/Icon'
+import { BsCircleFill as TagIcon } from "react-icons/bs";
+import { useDisplay } from '../contexts/DisplayContext'
 import './Card.css'
 
-const Card = ({ticketId, ticketTitle, available}) => {
+const Card = ({ticketId, ticketTitle, available, userName, priority, status}) => {
 
    // id, title, status, priority, userName, available
+  const { groupingType } = useDisplay()
+  let display = {
+    user: 'block',
+    priority: 'flex',
+    status: 'block'
+  }
+  display[groupingType] = 'none'
+  console.log(display['user'], display['priority'], display['status'])
+
   const userStatusIconColor = available?'green':'grey';
+  const userIcon = getUserIcon(userName)
+  const priorityIcon = getPriorityIcon(priority)
+  const statusIcon = getStatusIcon(status)
 
   return (
     <div className="card-wrapper">
         <div className="card-upper-wrapper">
             <div className="ticket-details">
                 <span className="ticket-id">{ticketId}</span>
-                <div className="user-container">
-                    <img/>
+                <div className="user-container" style={{display: display['user']}}>
+                    {userIcon}
                     <div className="user-status-circle" style={{backgroundColor: userStatusIconColor}}></div>
                 </div>
             </div>
             <div className="ticket-title-span">
-                <img/>
+                <span className="status-icon" style={{display: display['status']}}>{statusIcon}</span>
                 <h2 className="ticket-title">{ticketTitle}</h2>
             </div>
         </div>
         <div className="card-lower-wrapper">
-            <div className="priority-icon-wrapper"><img/></div>
+            <div className="priority-icon-wrapper" style={{display: display['priority']}}>{priorityIcon}</div>
             <div className="tag-wrapper">
-                <img/>
+                <TagIcon size={13} color={'#a3a3a3'}/>
                 <div className="tag-name">Feature Request</div>
             </div>
         </div>
