@@ -1,0 +1,20 @@
+.dashboard-wrapper {
+    padding: 0 4rem 4rem 4rem;
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem; 
+
+    scrollbar-width: thin; 
+    scrollbar-color: transparent transparent;
+    &::-webkit-scrollbar {
+        width: 0.1em;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+}

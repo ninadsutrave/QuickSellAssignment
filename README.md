@@ -29,24 +29,28 @@ Email: 2019med1010@iitrpr.ac.in
 ✓ Sophisticated UI and easy to use
 
 
-## Libraries/Packages Used
+## Dependencies Used
+ - **Axios**
+
+ For fetching APIs
+
  - **React Icons**:
 
  For necesssary icons in the UI
 
  - **Prop Types**:
 
- To specify prop types passed to the components
+ For specifying prop types passed
 
  ## APIs used
 
- - **QuickSell API**
+ **QuickSell API**
 
 https://api.quicksell.co/v1/internal/frontend-assignment
 
 To fetch ticket and user information
 
- - **UI Avatars**
+ **UI Avatars**
 
  https://ui-avatars.com/api
 

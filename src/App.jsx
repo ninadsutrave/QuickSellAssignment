@@ -1,18 +1,22 @@
-import Dashboard from './components/Dashboard'
-import Header from './components/Header'
-import ToggleButton from './components/ToggleButton'
 import { DisplayProvider } from './contexts/DisplayContext'
+
+import Header from './sections/Header'
+import DisplayButton from './components/DisplayButton'
+
+import Dashboard from './sections/Dashboard'
+import KanbanBoard from './components/KanbanBoard'
+
 import './App.css'
 
-function App() {
-
+const App = () => {
   return (
     <div className="kanban-wrapper">
       <DisplayProvider>
         <Header>
-          <ToggleButton/>
+          <DisplayButton/>
         </Header>
         <Dashboard>
+          <KanbanBoard/>
         </Dashboard>
       </DisplayProvider>
     </div>

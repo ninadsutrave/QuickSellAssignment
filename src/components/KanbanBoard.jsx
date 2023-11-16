@@ -4,9 +4,9 @@ import ColumnHeading from './ColumnHeading'
 import { getTicketData } from '../utils/TicketData'
 import { getSortedTickets } from '../utils/SortTickets'
 import Card from './Card'
-import './Dashboard.css'
+import './KanbanBoard.css'
 
-const Dashboard = () => {
+const KanbanBoard = () => {
   const {groupingType, orderingType} = useDisplay()
   const [ticketsData, setTicketsData] = useState([])
 
@@ -45,9 +45,28 @@ const Dashboard = () => {
   });
   return (
     <div>
-      Dashboard
+      {columnData.map((column, columnIndex) => (
+        <div key={columnIndex} className="grid-column">
+          
+          {<ColumnHeading heading={column.heading} length={sortedTickets[columnIndex]?sortedTickets[columnIndex].length:0}/>}
+          
+          {sortedTickets[columnIndex] && sortedTickets[columnIndex].map((ticket) => (
+            <div key={ticket.id} className="grid-cell">
+              <Card 
+                ticketId={ticket.id}
+                ticketTitle={ticket.title}
+                available={ticket.available}
+                userName={ticket.user}
+                priority={ticket.priority}
+                status={ticket.status}
+              />
+            </div>
+          ))}
+
+        </div>
+      ))}
     </div>
   )
 }
 
-export default Dashboard
+export default KanbanBoard
