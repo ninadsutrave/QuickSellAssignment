@@ -2,6 +2,27 @@
   --light-grey: #f4f5f8;
 }
 
+@font-face {
+  font-family: "General Sans Variable";
+  src: local("General Sans Variable"),
+    url(./assets/fonts/GeneralSans-Variable.eot) format("embedded-opentype"),
+    url(./assets/fonts/GeneralSans-Variable.woff2) format("woff2"),
+    url(./assets/fonts/GeneralSans-Variable.woff) format("woff"),
+    url(./assets/fonts/GeneralSans-Variable.ttf) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans Variable";
+  src: local("General Sans Variable"),
+    url(./assets/fonts/GeneralSans-VariableItalic.eot)
+      format("embedded-opentype"),
+    url(./assets/fonts/GeneralSans-VariableItalic.woff2) format("woff2"),
+    url(./assets/fonts/GeneralSans-VariableItalic.woff) format("woff"),
+    url(./assets/fonts/GeneralSans-VariableItalic.ttf) format("truetype");
+  font-style: italic;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,5 +30,14 @@
 }
 
 body {
+  font-family: "General Sans Variable", sans-serif;
   background: #f4f5f8;
+}
+
+.kanban-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--light-grey);
 }

@@ -7,7 +7,7 @@ import './App.css'
 function App() {
 
   return (
-    <>
+    <div className="kanban-wrapper">
       <DisplayProvider>
         <Header>
           <ToggleButton/>
@@ -15,7 +15,7 @@ function App() {
         <Dashboard>
         </Dashboard>
       </DisplayProvider>
-    </>
+    </div>
   )
 }
 
