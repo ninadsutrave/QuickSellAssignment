@@ -1,10 +1,16 @@
+import PropTypes from 'prop-types'
 import './Header.css'
 
-const Header = () => {
+const Header = ({children}) => {
   return (
-    <div>
+    <div className="header">
+      {children}
     </div>
   )
 }
+
+Header.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Header
