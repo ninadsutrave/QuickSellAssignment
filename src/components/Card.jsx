@@ -4,7 +4,7 @@ import { BsCircleFill as TagIcon } from "react-icons/bs";
 import { useDisplay } from '../contexts/DisplayContext'
 import './Card.css'
 
-const Card = ({ticketId, ticketTitle, available, userName, priority, status}) => {
+const Card = ({ticketId, ticketTitle, available, userName, priority, status, tag}) => {
 
   const { groupingType } = useDisplay()
   let display = {
@@ -13,9 +13,19 @@ const Card = ({ticketId, ticketTitle, available, userName, priority, status}) =>
     status: 'block'
   }
   display[groupingType] = 'none'
-  console.log(display['user'], display['priority'], display['status'])
 
-  const userStatusIconColor = available?'green':'grey';
+  let paddingBottom = '0'
+  const a = document.getElementById("ticket-title-container"+ticketId)
+  if(a) {
+    const domHeight = a.offsetHeight
+    const linesHeight = parseInt(a.style.lineHeight)
+    const totalLines = domHeight / linesHeight
+    if(totalLines == 1) {
+        paddingBottom = '55px'
+    }
+  }
+
+  const userStatusIconColor = available?'green':'grey'
   const userIcon = getUserIcon(userName)
   const priorityIcon = getPriorityIcon(priority)
   const statusIcon = getStatusIcon(status)
@@ -23,7 +33,7 @@ const Card = ({ticketId, ticketTitle, available, userName, priority, status}) =>
   return (
     <div className="card-wrapper">
         <div className="card-upper-wrapper">
-            <div className="ticket-details">
+            <div className="ticket-details" style={{paddingBottom: {paddingBottom}}}>
                 <span className="ticket-id">{ticketId}</span>
                 <div className="user-container" style={{display: display['user']}}>
                     {userIcon}
@@ -32,14 +42,14 @@ const Card = ({ticketId, ticketTitle, available, userName, priority, status}) =>
             </div>
             <div className="ticket-title-span">
                 <span className="status-icon" style={{display: display['status']}}>{statusIcon}</span>
-                <h2 className="ticket-title">{ticketTitle}</h2>
+                <h2 className="ticket-title" id={"ticket-title-container"+ticketId}>{ticketTitle}</h2>
             </div>
         </div>
         <div className="card-lower-wrapper">
             <div className="priority-icon-wrapper" style={{display: display['priority']}}>{priorityIcon}</div>
             <div className="tag-wrapper">
                 <TagIcon size={13} color={'#a3a3a3'}/>
-                <div className="tag-name">Feature Request</div>
+                <div className="tag-name">{tag}</div>
             </div>
         </div>
     </div>
@@ -52,7 +62,8 @@ Card.propTypes = {
     status: PropTypes.string.isRequired,
     priority: PropTypes.number.isRequired,
     userName: PropTypes.string.isRequired,
-    available: PropTypes.bool.isRequired
+    available: PropTypes.bool.isRequired,
+    tag: PropTypes.string.isRequired
 };
   
 export default Card

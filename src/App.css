@@ -1,27 +1,27 @@
 :root {
-  --light-grey: #f4f5f8;
+    --light-grey: #f4f5f8;
 }
 
 @font-face {
-  font-family: "General Sans Variable";
-  src: local("General Sans Variable"),
-    url(./assets/fonts/GeneralSans-Variable.woff2) format("woff2");
-  font-style: normal;
-  font-display: swap;
+    font-family: "General Sans Variable";
+    src: local("General Sans Variable"),
+      url(./assets/fonts/GeneralSans-Variable.woff2) format("woff2");
+    font-style: normal;
+    font-display: swap;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "General Sans Variable", sans-serif;
-  background: #f4f5f8;
+    font-family: "General Sans Variable", sans-serif;
+    background: #f4f5f8;
 }
 
 .kanban-wrapper {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
