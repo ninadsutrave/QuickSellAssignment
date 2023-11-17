@@ -1,9 +1,15 @@
 import axios from 'axios'
 
+const userAvailability = {}
+
 export const getTickets = () => {
     return axios.get('https://api.quicksell.co/v1/internal/frontend-assignment')
     .then((response) => {
         if(response.data) {
+            response.data.users.forEach((user) => {
+              userAvailability[user.name] = user.available
+            })
+
             const ticketData = response.data.tickets.map((ticket) => {
               const users = response.data.users.find((user) => user.id === ticket.userId);
 
@@ -46,14 +52,5 @@ export const getPriority = (priorityName) => {
 }
 
 export const getAvailability = (userName) => {
-  return axios.get('https://api.quicksell.co/v1/internal/frontend-assignment')
-  .then((response) => {
-      if(response.data) {
-          const user = response.data.users.find((user) => user.name === userName);
-          if(user) {
-            return user.available
-          }
-      } else throw console.error('Response null');
-  })
-  .catch((err) => console.log(err))
+  return userAvailability[userName]
 }

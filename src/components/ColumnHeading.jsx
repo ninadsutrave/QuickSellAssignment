@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { getStatusIcon, getPriorityIcon, getUserIcon } from '../utils/Icon'
 import { useDisplay } from '../contexts/DisplayContext'
 import { getAvailability, getPriorityName } from '../utils/TicketApi'
@@ -9,7 +8,6 @@ import './ColumnHeading.css'
 
 const Heading = ({heading, length}) => {
 
-  const [availability, setAvailibility] = useState(false)
   const {groupingType} = useDisplay()
 
   let icon
@@ -19,8 +17,7 @@ const Heading = ({heading, length}) => {
   } else if(groupingType === "status") {
     icon = getStatusIcon(heading)
   } else if(groupingType === "user") {
-    getAvailability(heading).then((response) => setAvailibility(response)).catch((err) => console.log(err))
-    const userStatusIconColor = availability?'green':'grey';
+    const userStatusIconColor = getAvailability(heading)?'green':'grey';
     icon = getUserIcon(heading)
     icon = <div className="user-container">{icon}<div className="user-status-circle" style={{backgroundColor: userStatusIconColor}}></div></div>
   }

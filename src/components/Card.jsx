@@ -18,7 +18,6 @@ const Card = ({ticketId, ticketTitle, available, userName, priority, status, tag
 
   const [bottomMargin, setBottomMargin] = useState('15px')
   const [topMargin, setTopMargin] = useState('5px')
-  console.log(ticketId, bottomMargin)
   useEffect(() => {
     if (titleRef.current) {
         const containerHeight = titleRef.current.offsetHeight
