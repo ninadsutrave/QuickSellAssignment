@@ -24,7 +24,7 @@ const Card = ({ticketId, ticketTitle, available, userName, priority, status, tag
         const containerHeight = titleRef.current.offsetHeight
         if(containerHeight && containerHeight<30) {
             setTopMargin('16px')
-            setBottomMargin('25px')
+            setBottomMargin('24px')
         }
     }
   }, [bottomMargin])

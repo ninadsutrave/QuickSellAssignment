@@ -28,3 +28,9 @@
     }
 
 }
+
+@media only screen and (max-width: 800px) {
+    .dashboard-wrapper {
+        padding-left: 2rem;
+    }
+}
