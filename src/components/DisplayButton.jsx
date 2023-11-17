@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { BiSlider as SortIcon } from "react-icons/bi";
 import { MdKeyboardArrowDown as DownIcon } from "react-icons/md";
 import OptionsMenu from './OptionsMenu'
@@ -6,7 +6,9 @@ import './DisplayButton.css'
 
 const DisplayButton = () => {
 
-    const [optionsMenuVisible, setOptionsMenuVisible] = useState(false)
+    const [optionsMenuVisible, setOptionsMenuVisible] = useState(false);
+    const buttonRef = useRef();
+
     const toggleMenu = (event) => {
         const tagName = event.target.tagName.toLowerCase();
         if(tagName != "select") {
@@ -14,8 +16,22 @@ const DisplayButton = () => {
         }
     }
 
+    const handleOutsideClick = (event) => {
+        if (buttonRef.current && !buttonRef.current.contains(event.target)) {
+            setOptionsMenuVisible(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('click', handleOutsideClick);
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
+
+
   return (
-    <button className="display-button" onClick={toggleMenu}>
+    <button className="display-button" onClick={toggleMenu} ref={buttonRef}>
         <div className="display-button-wrapper">
             <SortIcon />
             <strong>Display</strong>
