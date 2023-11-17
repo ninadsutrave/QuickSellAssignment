@@ -28,6 +28,7 @@ Email: 2019med1010@iitrpr.ac.in
 
 ✓ Sophisticated UI and easy to use
 
+✓ Responsive on all devices
 
 ## Dependencies Used
  - **Axios**
