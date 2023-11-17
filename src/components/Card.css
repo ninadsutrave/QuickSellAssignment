@@ -8,7 +8,14 @@
     border-radius: 8px;
     background-color: #fafafa;
     box-shadow: rgb(214, 214, 214) 0px 0px 5px;
+    transition: 0.3s ease-in-out;
 }
+
+.card-wrapper:hover {
+    box-shadow: rgba(255, 172, 28, 0.199) -4px 4px, rgba(219, 189, 137, 0.19) -8px 8px;
+    transform: translate(2px, -2px);
+}
+
 
 .ticket-title-span {
     width: 100%;
