@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types'
-import { getPriorityIcon, getStatusIcon, getUserIcon } from '../utils/Icon'
+import { getPriorityIcon, getStatusIcon, getUserIcon } from '../utils/getIcon'
 import { BsCircleFill as TagIcon } from "react-icons/bs";
 import { useDisplay } from '../contexts/DisplayContext'
 import './Card.css'
 
 const Card = ({ticketId, ticketTitle, available, userName, priority, status}) => {
 
-   // id, title, status, priority, userName, available
   const { groupingType } = useDisplay()
   let display = {
     user: 'block',

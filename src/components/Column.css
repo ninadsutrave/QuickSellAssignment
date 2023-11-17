@@ -1,0 +1,5 @@
+.grid-cell {
+    border: 1px solid #ccc;
+    box-shadow: #e6e6e6 0 0 3px;
+    border-radius: 16px;
+}
