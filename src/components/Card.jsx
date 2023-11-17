@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { useState, useEffect, useRef } from 'react'
 import { getPriorityIcon, getStatusIcon, getUserIcon } from '../utils/Icon'
 import { BsCircleFill as TagIcon } from "react-icons/bs";
 import { useDisplay } from '../contexts/DisplayContext'
@@ -6,6 +7,7 @@ import './Card.css'
 
 const Card = ({ticketId, ticketTitle, available, userName, priority, status, tag}) => {
 
+  const titleRef = useRef();
   const { groupingType } = useDisplay()
   let display = {
     user: 'block',
@@ -14,16 +16,18 @@ const Card = ({ticketId, ticketTitle, available, userName, priority, status, tag
   }
   display[groupingType] = 'none'
 
-  let paddingBottom = '0'
-  const a = document.getElementById("ticket-title-container"+ticketId)
-  if(a) {
-    const domHeight = a.offsetHeight
-    const linesHeight = parseInt(a.style.lineHeight)
-    const totalLines = domHeight / linesHeight
-    if(totalLines == 1) {
-        paddingBottom = '55px'
+  const [bottomMargin, setBottomMargin] = useState('15px')
+  const [topMargin, setTopMargin] = useState('5px')
+  console.log(ticketId, bottomMargin)
+  useEffect(() => {
+    if (titleRef.current) {
+        const containerHeight = titleRef.current.offsetHeight
+        if(containerHeight && containerHeight<30) {
+            setTopMargin('15px')
+            setBottomMargin('23px')
+        }
     }
-  }
+  }, [bottomMargin])
 
   const userStatusIconColor = available?'green':'grey'
   const userIcon = getUserIcon(userName)
@@ -33,16 +37,16 @@ const Card = ({ticketId, ticketTitle, available, userName, priority, status, tag
   return (
     <div className="card-wrapper">
         <div className="card-upper-wrapper">
-            <div className="ticket-details" style={{paddingBottom: {paddingBottom}}}>
+            <div className="ticket-details">
                 <span className="ticket-id">{ticketId}</span>
                 <div className="user-container" style={{display: display['user']}}>
                     {userIcon}
                     <div className="user-status-circle" style={{backgroundColor: userStatusIconColor}}></div>
                 </div>
             </div>
-            <div className="ticket-title-span">
+            <div className="ticket-title-span" style={{marginTop: topMargin, marginBottom: bottomMargin}}>
                 <span className="status-icon" style={{display: display['status']}}>{statusIcon}</span>
-                <h2 className="ticket-title" id={"ticket-title-container"+ticketId}>{ticketTitle}</h2>
+                <h2 className="ticket-title" id={ticketId} ref={titleRef}>{ticketTitle}</h2>
             </div>
         </div>
         <div className="card-lower-wrapper">
