@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useDisplay } from '../contexts/DisplayContext'
 import ColumnHeading from './ColumnHeading'
-import { getTicketData } from '../utils/getTicketData'
+import { getTickets } from '../utils/getTicketData'
 import { getSortedTickets } from '../utils/TicketSorter'
 import Card from './Card'
 import './KanbanBoard.css'
@@ -18,7 +18,7 @@ const KanbanBoard = () => {
   let statuses = ["Backlog", "Todo", "In progress", "Done", "Canceled"]  
 
   if(ticketsData.length == 0) {
-    getTicketData().then(data => {(data)?setTicketsData(data):null})
+    getTickets().then(data => {(data)?setTicketsData(data):null})
                    .catch(error => {console.error('Error in handleData:', error);});
   } 
 

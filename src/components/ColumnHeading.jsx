@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { getStatusIcon, getPriorityIcon, getUserIcon } from '../utils/Icon'
+import { getStatusIcon, getPriorityIcon, getUserIcon } from '../utils/getIcon'
 import { useDisplay } from '../contexts/DisplayContext'
 import { getAvailability, getPriorityName } from '../utils/getTicketData'
 import { BsThreeDots as Options } from 'react-icons/bs'
