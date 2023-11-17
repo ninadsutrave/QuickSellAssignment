@@ -44,13 +44,13 @@ Email: 2019med1010@iitrpr.ac.in
 
  ## APIs used
 
- - **QuickSell API**
+ **QuickSell API**
 
 https://api.quicksell.co/v1/internal/frontend-assignment
 
 To fetch ticket and user information
 
- - **UI Avatars**
+ **UI Avatars**
 
  https://ui-avatars.com/api
 
