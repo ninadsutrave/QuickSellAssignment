@@ -7,7 +7,7 @@
     border: 2px solid #e3e3e3;
     border-radius: 8px;
     cursor: pointer;
-    box-shadow: rgb(234, 233, 233) 0px 0px 2px;
+    box-shadow: 0 4px 8px 0 rgba(122, 122, 122, 0.2), 0 6px 20px 0 rgba(122, 122, 122, 0.19);;
 
     display: grid;
     grid-template-rows: 1fr 1fr;

@@ -1,0 +1,15 @@
+.test {
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.grid-column {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 1rem;
+}
