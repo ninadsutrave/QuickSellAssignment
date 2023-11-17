@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { getPriorityIcon, getStatusIcon, getUserIcon } from '../utils/getIcon'
+import { getPriorityIcon, getStatusIcon, getUserIcon } from '../utils/Icon'
 import { BsCircleFill as TagIcon } from "react-icons/bs";
 import { useDisplay } from '../contexts/DisplayContext'
 import './Card.css'

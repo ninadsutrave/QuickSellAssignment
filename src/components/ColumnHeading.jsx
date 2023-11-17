@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { getStatusIcon, getPriorityIcon, getUserIcon } from '../utils/getIcon'
+import { getStatusIcon, getPriorityIcon, getUserIcon } from '../utils/Icon'
 import { useDisplay } from '../contexts/DisplayContext'
-import { getAvailability, getPriorityName } from '../utils/getTicketData'
+import { getAvailability, getPriorityName } from '../utils/TicketApi'
 import { BsThreeDots as Options } from 'react-icons/bs'
 import { BiPlus as Add } from "react-icons/bi"
 import PropTypes from 'prop-types'
