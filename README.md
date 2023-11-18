@@ -41,11 +41,11 @@ The website has received a 'near perfect' score on Lighthouse.
 
  For fetching APIs
 
- - **[React Icons](https://www.npmjs.com/package/react-icons)**:
+ - **[React Icons](https://www.npmjs.com/package/react-icons)**
 
  For necesssary icons in the UI
 
- - **[Prop Types](https://www.npmjs.com/package/prop-types)**:
+ - **[Prop Types](https://www.npmjs.com/package/prop-types)**
 
  For specifying prop types passed
 
@@ -117,6 +117,3 @@ Start the development server to run the React application locally.
 Run the following command
 
     $ npm run dev
-
-
-
