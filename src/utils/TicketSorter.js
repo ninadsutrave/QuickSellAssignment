@@ -1,4 +1,4 @@
-import { getPriorityName  } from "./TicketApi";
+import { getPriorityName } from "./TicketApi";
 
 const attributeComparator = (attribute) => (a, b) => {
   let valueA, valueB

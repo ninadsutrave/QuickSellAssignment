@@ -1,6 +1,8 @@
 import axios from 'axios'
 
 const userAvailability = {}
+const priority = new Map([["No Priority", 0], ["Low Priority", 1], ["Medium Priority", 2], ["High Priority", 3], ["Urgent", 4]]);
+const priorityName = new Map([[0, "No Priority"], [1, "Low Priority"], [2, "Medium Priority"], [3, "High Priority"], [4, "Urgent"]]);
 
 export const getTickets = () => {
     return axios.get('https://api.quicksell.co/v1/internal/frontend-assignment')
@@ -30,25 +32,11 @@ export const getTickets = () => {
 }
 
 export const getPriorityName = (priority) => {
-  switch (priority) {
-    case 0: return "No Priority";
-    case 1: return "Low Priority";
-    case 2: return "Medium Priority"; 
-    case 3: return "High Priority";
-    case 4: return "Urgent";
-    default: return ""
-  }
+  return priorityName.get(priority)
 }
 
 export const getPriority = (priorityName) => {
-  switch (priorityName) {
-    case "No Priority": return 0;
-    case "Low Priority": return 1;
-    case "Medium Priority": return 2;
-    case "High Priority": return 3;
-    case "Urgent": return 4;
-    default: return null;
-  } 
+  return priority.get(priorityName)
 }
 
 export const getAvailability = (userName) => {
