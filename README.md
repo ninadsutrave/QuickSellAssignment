@@ -80,7 +80,9 @@ Here is a step by step guide to set this project up on your local environment!
 
 1. Clone the Repository
 
-Open a terminal or command prompt and navigate to the directory where you want to clone the repository. Run the following command
+Open a terminal or command prompt and navigate to the directory where you want to clone the repository. 
+
+Run the following command
 
 Using HTTPS
 
@@ -94,19 +96,25 @@ Using SSH
 
 2. Navigate to the Project Directory
 
-Change your working directory to the project folder. Run the following command
+Change your working directory to the project folder. 
+
+Run the following command
 
     $ cd QuickSellAssignment
 
 3. Install Dependencies
 
-Inside the project folder, install the required dependencies using npm (Node Package Manager). Run the following command
+Inside the project folder, install the required dependencies using npm. 
+
+Run the following command
 
     $ npm install
 
 4. Run the Development Server
 
-Start the development server to run the React application locally. Run the following command
+Start the development server to run the React application locally. 
+
+Run the following command
 
     $ npm run dev
 

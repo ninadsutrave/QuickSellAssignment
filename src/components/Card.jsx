@@ -32,7 +32,6 @@ const Card = ({ticketId, ticketTitle, available, userName, priority, status, tag
   const userIcon = getUserIcon(userName)
   const priorityIcon = getPriorityIcon(priority)
   const statusIcon = getStatusIcon(status)
-  tags.map((tag) => console.log(tag))
 
   return (
     <div className="card-wrapper">
