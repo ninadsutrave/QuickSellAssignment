@@ -1,7 +1,6 @@
 import { getPriorityName  } from "./TicketApi";
 
 const attributeComparator = (attribute) => (a, b) => {
-
   let valueA, valueB
   if(typeof a[attribute] === 'string') {
     valueA = a[attribute].toLowerCase()
@@ -62,15 +61,6 @@ const sortOnBasisOfStatus = (groupedTickets, orderingType) => {
 }
 
 export const getSortedTickets = (ticketsData, groupingType, orderingType) => {
-  return [[{
-    id: 'CAM-7',
-    title: 'YO just checking',
-    tag: 'HAHA',
-    status: 'In progress',
-    priority: 'Urgent',
-    available: true,
-    user: 'Sweety'
-  }]]
   const groupedTickets = groupByProperty(ticketsData, groupingType);
 
   if(groupingType === "user") {
