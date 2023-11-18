@@ -19,21 +19,35 @@ const attributeComparator = (attribute) => (a, b) => {
 };
 
 const groupByProperty = (tickets, groupingType) => {
-    return tickets.reduce((result, ticket) => {
-      const userGroup = result.find((group) => group[0]?.[groupingType] === ticket[groupingType]);
-  
-      if (userGroup) {
-        userGroup.push(ticket);
-      } else {
-        result.push([ticket]);
-      }
-  
-      return result;
-    }, []);
+  const groupedMap = new Map();
+
+  tickets.forEach((ticket) => {
+    const key = ticket[groupingType];
+    const group = groupedMap.get(key) || [];
+    group.push(ticket);
+    groupedMap.set(key, group);
+  });
+
+  return Array.from(groupedMap.values());
 };
 
-const priorities = ["No Priority", "Urgent", "High Priority", "Medium Priority", "Low Priority"]
-const statuses = ["Backlog", "Todo", "In progress", "Done", "Canceled"]
+
+// const groupByProperty = (tickets, groupingType) => {
+//     return tickets.reduce((result, ticket) => {
+//       const userGroup = result.find((group) => group[0]?.[groupingType] === ticket[groupingType]);
+  
+//       if (userGroup) {
+//         userGroup.push(ticket);
+//       } else {
+//         result.push([ticket]);
+//       }
+  
+//       return result;
+//     }, []);
+// };
+
+const priorityIndex = new Map([["No Priority", 0], ["Low Priority", 4], ["Medium Priority", 3], ["High Priority", 2], ["Urgent", 1]]);
+const statusIndex = new Map([["Backlog", 0], ["Todo", 1], ["In progress", 2], ["Done", 3], ["Done", 4]]);
 
 const sortOnBasisOfUser = (groupedTickets, orderingType) => {
   groupedTickets.sort((a, b) => a[0].user.localeCompare(b[0].user))
@@ -42,8 +56,8 @@ const sortOnBasisOfUser = (groupedTickets, orderingType) => {
 
 const sortOnBasisOfPriority = (groupedTickets, orderingType) => {
   groupedTickets.sort((a, b) => {
-    const indexA = priorities.indexOf(getPriorityName(a[0].priority));
-    const indexB = priorities.indexOf(getPriorityName(b[0].priority));
+    const indexA = priorityIndex.get(getPriorityName(a[0].priority));
+    const indexB = priorityIndex.get(getPriorityName(b[0].priority));
 
     return indexA - indexB;
   })
@@ -52,8 +66,8 @@ const sortOnBasisOfPriority = (groupedTickets, orderingType) => {
 
 const sortOnBasisOfStatus = (groupedTickets, orderingType) => {
   groupedTickets.sort((a, b) => {
-    const indexA = statuses.indexOf(a[0].status);
-    const indexB = statuses.indexOf(b[0].status);
+    const indexA = statusIndex.get(a[0].status);
+    const indexB = statusIndex.get(b[0].status);
 
     return indexA - indexB;
   })
