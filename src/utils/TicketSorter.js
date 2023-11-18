@@ -19,32 +19,16 @@ const attributeComparator = (attribute) => (a, b) => {
 };
 
 const groupByProperty = (tickets, groupingType) => {
-  const groupedMap = new Map();
+  const groupedMap = {};
 
   tickets.forEach((ticket) => {
     const key = ticket[groupingType];
-    const group = groupedMap.get(key) || [];
-    group.push(ticket);
-    groupedMap.set(key, group);
+    groupedMap[key] = groupedMap[key] || [];
+    groupedMap[key].push(ticket);
   });
 
-  return Array.from(groupedMap.values());
+  return Object.values(groupedMap);
 };
-
-
-// const groupByProperty = (tickets, groupingType) => {
-//     return tickets.reduce((result, ticket) => {
-//       const userGroup = result.find((group) => group[0]?.[groupingType] === ticket[groupingType]);
-  
-//       if (userGroup) {
-//         userGroup.push(ticket);
-//       } else {
-//         result.push([ticket]);
-//       }
-  
-//       return result;
-//     }, []);
-// };
 
 const priorityIndex = new Map([["No Priority", 0], ["Low Priority", 4], ["Medium Priority", 3], ["High Priority", 2], ["Urgent", 1]]);
 const statusIndex = new Map([["Backlog", 0], ["Todo", 1], ["In progress", 2], ["Done", 3], ["Done", 4]]);
