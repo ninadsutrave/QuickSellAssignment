@@ -5,7 +5,7 @@ import { BsCircleFill as TagIcon } from "react-icons/bs";
 import { useDisplay } from '../contexts/DisplayContext'
 import './Card.css'
 
-const Card = ({ticketId, ticketTitle, available, userName, priority, status, tag}) => {
+const Card = ({ticketId, ticketTitle, available, userName, priority, status, tags}) => {
 
   const titleRef = useRef();
   const { groupingType } = useDisplay()
@@ -32,6 +32,7 @@ const Card = ({ticketId, ticketTitle, available, userName, priority, status, tag
   const userIcon = getUserIcon(userName)
   const priorityIcon = getPriorityIcon(priority)
   const statusIcon = getStatusIcon(status)
+  tags.map((tag) => console.log(tag))
 
   return (
     <div className="card-wrapper">
@@ -52,7 +53,7 @@ const Card = ({ticketId, ticketTitle, available, userName, priority, status, tag
             <div className="priority-icon-wrapper" style={{display: display['priority']}}>{priorityIcon}</div>
             <div className="tag-wrapper">
                 <TagIcon size={13} color={'#a3a3a3'}/>
-                <div className="tag-name">{tag}</div>
+                {tags.map((tag, index) => (<div key={index} className="tag-name">{tag}</div>))}
             </div>
         </div>
     </div>
@@ -66,7 +67,7 @@ Card.propTypes = {
     priority: PropTypes.number.isRequired,
     userName: PropTypes.string.isRequired,
     available: PropTypes.bool.isRequired,
-    tag: PropTypes.string.isRequired
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
   
 export default Card

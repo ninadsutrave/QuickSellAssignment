@@ -18,6 +18,12 @@ Portfolio: [ninadsutrave.in](https://ninadsutrave.in)
 
 Email: 2019med1010@iitrpr.ac.in
 
+## Lighthouse Report
+
+The website has received a 'near perfect' score on Lighthouse.
+
+ ![Lighthouse Report](src/assets/images/LighthouseReport.jpeg)
+
 ## Features
 
 ✓ Easy tracking of pending work by subordinates/employees/team
@@ -49,7 +55,7 @@ Email: 2019med1010@iitrpr.ac.in
 
 To fetch ticket and user information
 
- - **[UI Avatars](https://ui-avatars.com/api)**
+ - **[UI Avatars](https://ui-avatars.com)**
 
  To generate avatar icon for each user
 
@@ -65,5 +71,44 @@ To fetch ticket and user information
 
   <img src="./src/assets/images/Tablet.png" alt="Mobile" width="700px" />
 
-  ### Mobile
+ ### Mobile
   <img src="./src/assets/images/Mobile.png" alt="Mobile" width="300px" />
+
+## Installation
+
+Here is a step by step guide to set this project up on your local environment!
+
+1. Clone the Repository
+
+Open a terminal or command prompt and navigate to the directory where you want to clone the repository. Run the following command
+
+Using HTTPS
+
+    $ https://github.com/ninadsutrave/QuickSellAssignment.git
+
+**OR**
+
+Using SSH
+
+    $ git clone git@github.com:ninadsutrave/QuickSellAssignment.git
+
+2. Navigate to the Project Directory
+
+Change your working directory to the project folder. Run the following command
+
+    $ cd QuickSellAssignment
+
+3. Install Dependencies
+
+Inside the project folder, install the required dependencies using npm (Node Package Manager). Run the following command
+
+    $ npm install
+
+4. Run the Development Server
+
+Start the development server to run the React application locally. Run the following command
+
+    $ npm run dev
+
+
+

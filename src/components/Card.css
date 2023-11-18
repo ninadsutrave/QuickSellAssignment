@@ -11,12 +11,6 @@
     transition: 0.2s ease-in-out;
 }
 
-.card-wrapper:hover {
-    box-shadow: rgba(255, 172, 28, 0.199) -5px 5px, rgba(219, 189, 137, 0.19) -10px 10px;
-    transform: translate(2px, -2px);
-}
-
-
 .ticket-title-span {
     width: 100%;
     margin: 5px 0 15px;

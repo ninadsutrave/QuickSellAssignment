@@ -17,7 +17,7 @@ const Column = ({sortedTickets, columnIndex}) => {
             userName={ticket.user}
             priority={ticket.priority}
             status={ticket.status}
-            tag={ticket.tag}
+            tags={ticket.tags}
           />
         </div>
       ))}
@@ -31,7 +31,7 @@ Column.propTypes = {
             PropTypes.shape({
                 id: PropTypes.string.isRequired,
                 title: PropTypes.string.isRequired,
-                tag: PropTypes.string.isRequired,
+                tags: PropTypes.arrayOf(PropTypes.string).isRequired,
                 status: PropTypes.string.isRequired,
                 priority: PropTypes.number.isRequired,
                 available: PropTypes.bool.isRequired,

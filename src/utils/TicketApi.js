@@ -18,7 +18,7 @@ export const getTickets = () => {
               return {
                 id: ticket.id,
                 title: ticket.title,
-                tag: ticket.tag[0],
+                tags: ticket.tag,
                 status: ticket.status,
                 priority: ticket.priority,
                 available: users.available,
