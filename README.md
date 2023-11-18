@@ -31,29 +31,25 @@ Email: 2019med1010@iitrpr.ac.in
 ✓ Responsive on all devices
 
 ## Dependencies Used
- - **Axios**
+ - **[Axios](https://www.npmjs.com/package/axios)**
 
  For fetching APIs
 
- - **React Icons**:
+ - **[React Icons](https://www.npmjs.com/package/react-icons)**:
 
  For necesssary icons in the UI
 
- - **Prop Types**:
+ - **[Prop Types](https://www.npmjs.com/package/prop-types)**:
 
  For specifying prop types passed
 
  ## APIs used
 
- - **QuickSell API**
-
-https://api.quicksell.co/v1/internal/frontend-assignment
+ - **[QuickSell API](https://api.quicksell.co/v1/internal/frontend-assignment)**
 
 To fetch ticket and user information
 
- - **UI Avatars**
-
- https://ui-avatars.com/api
+ - **[UI Avatars](https://ui-avatars.com/api)**
 
  To generate avatar icon for each user
 
