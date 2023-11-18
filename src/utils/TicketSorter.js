@@ -62,6 +62,15 @@ const sortOnBasisOfStatus = (groupedTickets, orderingType) => {
 }
 
 export const getSortedTickets = (ticketsData, groupingType, orderingType) => {
+  return [[{
+    id: 'CAM-7',
+    title: 'YO just checking',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 'Urgent',
+    available: true,
+    user: 'Sweety'
+  }]]
   const groupedTickets = groupByProperty(ticketsData, groupingType);
 
   if(groupingType === "user") {
