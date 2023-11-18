@@ -58,3 +58,17 @@ To fetch ticket and user information
  To generate avatar icon for each user
 
  ## Preview
+
+ ![Preview](src/assets/images/preview.gif)
+
+ ### Laptop
+
+ ![Laptop](src/assets/images/Laptop.png)
+
+ ### Tablet
+
+ ![Tablet](src/assets/images/Tablet.png)
+
+  ### Mobile
+
+ ![Mobile](src/assets/images/Mobile.png)
