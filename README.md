@@ -67,8 +67,7 @@ To fetch ticket and user information
 
  ### Tablet
 
- ![Tablet](src/assets/images/Tablet.png)
+  <img src="./src/assets/images/Tablet.png" alt="Mobile" width="700px" />
 
   ### Mobile
-
- ![Mobile](src/assets/images/Mobile.png)
+  <img src="./src/assets/images/Mobile.png" alt="Mobile" width="300px" />
