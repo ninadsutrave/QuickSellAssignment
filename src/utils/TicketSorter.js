@@ -61,6 +61,213 @@ const sortOnBasisOfStatus = (groupedTickets, orderingType) => {
 }
 
 export const getSortedTickets = (ticketsData, groupingType, orderingType) => {
+  return [[{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  }],
+  [{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  }],
+  [{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  }],
+  [{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  }],
+  [{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  },{
+    id: 'CAM-7',
+    title: 'YO JUST CHECKING',
+    tag: 'HAHA',
+    status: 'In progress',
+    priority: 3,
+    available: true,
+    user: 'Vikram'
+  }]]
+
+
   const groupedTickets = groupByProperty(ticketsData, groupingType);
 
   if(groupingType === "user") {
