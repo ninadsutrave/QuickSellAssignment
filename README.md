@@ -78,7 +78,7 @@ To fetch ticket and user information
 
 Here is a step by step guide to set this project up on your local environment!
 
-1. Clone the Repository
+**1. Clone the Repository**
 
 Open a terminal or command prompt and navigate to the directory where you want to clone the repository. 
 
@@ -94,7 +94,7 @@ Using SSH
 
     $ git clone git@github.com:ninadsutrave/QuickSellAssignment.git
 
-2. Navigate to the Project Directory
+**2. Navigate to the Project Directory**
 
 Change your working directory to the project folder. 
 
@@ -102,7 +102,7 @@ Run the following command
 
     $ cd QuickSellAssignment
 
-3. Install Dependencies
+**3. Install Dependencies**
 
 Inside the project folder, install the required dependencies using npm. 
 
@@ -110,7 +110,7 @@ Run the following command
 
     $ npm install
 
-4. Run the Development Server
+**4. Run the Development Server**
 
 Start the development server to run the React application locally. 
 
