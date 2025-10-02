@@ -19,10 +19,11 @@ const App = () => {
           console.log(key, "=", import.meta.env[key]);
         });
       } else {
-        console.log("No frontend env variables exposed (import.meta.env not available).");
+        console.log("No variables found!");
       }
     } catch (err) {
-    console.log("Error reading import.meta.env:", err);
+    console.log("Error reading env variables");
+    console.error(err);
   }
   }, []);
 
