@@ -11,15 +11,19 @@ import './App.css'
 
 const App = () => {
     useEffect(() => {
-    // This runs only once on first mount
-    if (import.meta && import.meta.env) {
-      console.log("Vite frontend env variables:");
-      Object.keys(import.meta.env).forEach((key) => {
-        console.log(key, "=", import.meta.env[key]);
-      });
-    } else {
-      console.log("No frontend env variables exposed (import.meta.env not available).");
-    }
+      try {
+      // This runs only once on first mount
+      if (import.meta && import.meta.env) {
+        console.log("Vite frontend env variables:");
+        Object.keys(import.meta.env).forEach((key) => {
+          console.log(key, "=", import.meta.env[key]);
+        });
+      } else {
+        console.log("No frontend env variables exposed (import.meta.env not available).");
+      }
+    } catch (err) {
+    console.log("Error reading import.meta.env:", err);
+  }
   }, []);
 
   return (
